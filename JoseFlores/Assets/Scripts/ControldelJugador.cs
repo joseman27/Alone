@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ControldelJugador : MonoBehaviour {
     public float speed;
-
+    Vector3 InicialPosition;
 
     // Use this for initialization
     void Start()
     {
-
+        InicialPosition = transform.position; 
     }
     // Update is called once per frame
     void Update()
@@ -18,6 +18,7 @@ public class ControldelJugador : MonoBehaviour {
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(new Vector3(-35, 0,0) * Time.deltaTime);
+           
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -31,5 +32,9 @@ public class ControldelJugador : MonoBehaviour {
         {
             transform.Translate(Vector3.back * speed * Time.deltaTime);
         }
+    }
+   public void ResetPosition() {
+        transform.position = InicialPosition;
+    
     }
 }
