@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movimiento : MonoBehaviour {
+public class SpawnArea : MonoBehaviour {
 
     public float speed;
     // Use this for initialization
