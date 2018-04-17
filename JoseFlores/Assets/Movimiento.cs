@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour {
 
-	// Use this for initialization
+    public float speed;
+    // Use this for initialization
 	void Start () {
 		
 	}
-	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKey (KeyCode.A)) {
+            transform.Translate(new Vector3(-35, 0, 0) * Time.deltaTime);
+       
 		
 	}
 }
